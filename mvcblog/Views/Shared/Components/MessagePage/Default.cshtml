@@ -1,0 +1,16 @@
+@model XTLASPNET.MessagePage.Message
+@{
+    Layout = "/Views/Shared/Admin/_LoginLayout.cshtml";
+    ViewData["Title"] = @Model.title;
+}
+<div class="card o-hidden border-0 shadow-lg">
+   <div class="card-header bg-dark text-light">
+       <h4>@Model.title</h3>
+   </div>
+   <div class="card-body">
+       @Html.Raw(Model.htmlcontent)
+   </div>
+   <div class="card-footer">
+       Chuyển đến - <a href="@Model.urlredirect">@Model.urlredirect</a>
+   </div>
+</div>
